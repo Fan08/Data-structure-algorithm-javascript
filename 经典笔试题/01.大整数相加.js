@@ -4,7 +4,7 @@
  * @Author: 唐帆
  * @Date: 2020-04-29 23:34:36
  * @LastEditors: 唐帆
- * @LastEditTime: 2020-04-29 23:57:25
+ * @LastEditTime: 2020-04-30 18:56:46
  */
 
 function bigNumberAdd(number1, number2) {
@@ -38,8 +38,7 @@ function bigNumberAdd(number1, number2) {
 
         if (itemResult >= 10) {
             addOne = true;
-            itemResult = itemResult.toString();
-            itemResult = itemResult.split('');
+            itemResult = itemResult.toString().split('');
             result.unshift(itemResult[1]);
         } else {
             addOne = false;
