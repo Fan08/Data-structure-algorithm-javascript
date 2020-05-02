@@ -4,7 +4,7 @@
  * @Author: 唐帆
  * @Date: 2020-04-29 23:06:10
  * @LastEditors: 唐帆
- * @LastEditTime: 2020-04-30 19:24:34
+ * @LastEditTime: 2020-05-02 20:11:06
  -->
 <!DOCTYPE html>
 <html lang="en">
@@ -16,17 +16,47 @@
     <script src="./01.冒泡排序.js"></script>
     <script src="./02.直接选择排序.js"></script>
     <script src="./03.插入排序.js"></script>
+    <script src="./04.希尔排序.js"></script>
+    <script src="./05.归并排序.js"></script>
+    <script src="./06.快速排序.js"></script>
+    <script src="./07.堆排序.js"></script>
+
     <script src="./经典笔试题/01.大整数相加.js"></script>
+    <script src="./经典笔试题/02.数组扁平化.js"></script>
+
+    <script src="./test.js"></script>
 </head>
 
 <body>
     <script>
         var array = [54, 27, 88, 93, 45, 60, 87, 12, 34];
+        var array1 = [11, 22, 33, 44, 55, 66, 77, 88, 99];
+        var array2 = [9, 22, 29, 39, 49, 59, 69, 79, 89];
         // console.log(bubbleSort(array));
-        // console.log(bigNumberAdd(12334, 1561561));
         // console.log(simpleSelectSort(array));
-        console.log(simpleInsertSort(array));
+        // console.log(simpleInsertSort(array));
+        // console.log(shellSort(array));
+        // console.log(merge(array1, array2));
+        // console.log(quickSort(array));
 
+        // 堆排序
+        let s = new priorityQueue();
+        for (let i of array) {
+            s.enQueue(i)
+        };
+        console.log(s.node);
+        console.log(s.deQueue());
+        console.log(s.node);
+
+
+        var array3 = [54, [27, "4156", [{ s: 15 }, 45, 60]], 87, 12, 34];
+        // console.log(bigNumberAdd(12334, 1561561));
+        // console.log(flattenArray(array3));
+
+        let treeA = { val: 1, left: { val: 2, left: null, right: null }, right: { val: 3, left: null, right: null } }
+        let treeB = { val: 1, left: { val: 2, left: null, right: null }, right: { val: 3, left: null, right: null } }
+        let matrix = [[1], [2], [3], [4], [5]]
+        // console.log(printMatrix(matrix))
     </script>
 </body>
 
