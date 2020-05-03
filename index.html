@@ -4,7 +4,7 @@
  * @Author: 唐帆
  * @Date: 2020-04-29 23:06:10
  * @LastEditors: 唐帆
- * @LastEditTime: 2020-05-02 20:56:27
+ * @LastEditTime: 2020-05-03 21:03:06
  -->
 <!DOCTYPE html>
 <html lang="en">
@@ -20,6 +20,7 @@
     <script src="./05.归并排序.js"></script>
     <script src="./06.快速排序.js"></script>
     <script src="./07.堆排序.js"></script>
+    <script src="08.二叉查找树的实现.js"></script>
 
     <script src="./经典笔试题/01.大整数相加.js"></script>
     <script src="./经典笔试题/02.数组扁平化.js"></script>
@@ -29,15 +30,17 @@
 
 <body>
     <script>
-        var array = [54, 27, 88, 93, 45, 60, 87, 12, 34];
+        var array = [1, 2, 3, 4, 5];
+        var array0 = [4, 3, 2, 5, 1];
         var array1 = [11, 22, 33, 44, 55, 66, 77, 88, 99];
-        var array2 = [9, 22, 29, 39, 49, 59, 69, 79, 89];
+        var array2 = [9, 89, 22, 29, 59, 39, 49, 69, 79];
+        var array4 = [4, 8, 6, 12, 16, 14, 10];
         // console.log(bubbleSort(array));
         // console.log(simpleSelectSort(array));
         // console.log(simpleInsertSort(array));
         // console.log(shellSort(array));
         // console.log(merge(array1, array2));
-        console.log(quickSort(array));
+        // console.log(quickSort(array));
 
         // 堆排序
         // let s = new priorityQueue();
@@ -48,15 +51,29 @@
         // console.log(s.deQueue());
         // console.log(s.node);
 
+        // 二叉树
+        let binaryTree = new BinarySearchTree();
+        for (let i of array2) {
+            binaryTree.insert(i)
+        }
+        console.log(binaryTree.delete(39));
+        console.log(binaryTree.node);
+
+
+
 
         var array3 = [54, [27, "4156", [{ s: 15 }, 45, 60]], 87, 12, 34];
         // console.log(bigNumberAdd(12334, 1561561));
         // console.log(flattenArray(array3));
 
         let treeA = { val: 1, left: { val: 2, left: null, right: null }, right: { val: 3, left: null, right: null } }
-        let treeB = { val: 1, left: { val: 2, left: null, right: null }, right: { val: 3, left: null, right: null } }
+        let treeB = {
+            val: 1,
+            left: { val: 2, left: { val: 4, left: null, right: null }, right: { val: 5, left: null, right: null } },
+            right: { val: 3, left: { val: 6, left: null, right: null }, right: { val: 7, left: null, right: null } }
+        }
         let matrix = [[1], [2], [3], [4], [5]]
-        // console.log(printMatrix(matrix))
+        // console.log(test(treeB, 2))
     </script>
 </body>
 

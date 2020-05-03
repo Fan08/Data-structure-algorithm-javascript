@@ -4,12 +4,13 @@
  * @Author: 唐帆
  * @Date: 2020-04-29 23:06:33
  * @LastEditors: 唐帆
- * @LastEditTime: 2020-04-29 23:30:07
+ * @LastEditTime: 2020-05-02 21:51:24
  */
 
 function bubbleSort(array) {
     //  相邻的两个数进行比较
     //  在整个排序过程中，需要记录某次排序是否发生位置变化
+    // 外层循环的作用之一就是记录排了多少个数字
     for (let i = 1; i < array.length; ++i) {
         let flag = true;
         // 从 0 位开始与后一位进行比较
